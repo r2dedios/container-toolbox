@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toolbox
+  namespace: container-toolbox
+  labels:
+    app: container-toolbox
+spec:
+  selector:
+    matchLabels:
+      app: container-toolbox
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: container-toolbox
+    spec:
+      containers:
+        - name: container-toolbox
+          image: >-
+            quay.io/avillega/container-toolbox:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP

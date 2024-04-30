@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: toolbox
+  namespace: container-toolbox
+  labels:
+    app: container-toolbox
+spec:
+  selector:
+    app: container-toolbox
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+
