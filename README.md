@@ -15,6 +15,15 @@ make build
 
 # Runs a container example
 make run
+
+# Stops the example container
+make stop
+
+# Deploys the toolbox in your current context (K8s/Openshift)
+make deploy
+
+# Undeploys the toolbox in your current context (K8s/Openshift)
+make undeploy
 ```
 
 ## Included tools
