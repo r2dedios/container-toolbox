@@ -39,7 +39,7 @@ RUN yum install -y \
   procps \
   nmap-ncat \
   wget \
-  bind-tools \
+  bind-utils \
   openssh \
   nmap
 
